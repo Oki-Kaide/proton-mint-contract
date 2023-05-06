@@ -1,0 +1,160 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [
+        {
+            "new_type_name": "ATOMIC_ATTRIBUTE",
+            "type": "variant_int8_int16_int32_int64_uint8_uint16_uint32_uint64_float32_float64_string_INT8_VEC_INT16_VEC_INT32_VEC_INT64_VEC_UINT8_VEC_UINT16_VEC_UINT32_VEC_UINT64_VEC_FLOAT_VEC_DOUBLE_VEC_STRING_VEC"
+        },
+        {
+            "new_type_name": "ATTRIBUTE_MAP",
+            "type": "pair_string_ATOMIC_ATTRIBUTE[]"
+        },
+        {
+            "new_type_name": "DOUBLE_VEC",
+            "type": "float64[]"
+        },
+        {
+            "new_type_name": "FLOAT_VEC",
+            "type": "float32[]"
+        },
+        {
+            "new_type_name": "INT16_VEC",
+            "type": "int16[]"
+        },
+        {
+            "new_type_name": "INT32_VEC",
+            "type": "int32[]"
+        },
+        {
+            "new_type_name": "INT64_VEC",
+            "type": "int64[]"
+        },
+        {
+            "new_type_name": "INT8_VEC",
+            "type": "bytes"
+        },
+        {
+            "new_type_name": "STRING_VEC",
+            "type": "string[]"
+        },
+        {
+            "new_type_name": "UINT16_VEC",
+            "type": "uint16[]"
+        },
+        {
+            "new_type_name": "UINT32_VEC",
+            "type": "uint32[]"
+        },
+        {
+            "new_type_name": "UINT64_VEC",
+            "type": "uint64[]"
+        },
+        {
+            "new_type_name": "UINT8_VEC",
+            "type": "uint8[]"
+        }
+    ],
+    "structs": [
+        {
+            "name": "Resource",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "ram_bytes",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "initstorage",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "mintlasttemp",
+            "base": "",
+            "fields": [
+                {
+                    "name": "creator",
+                    "type": "name"
+                },
+                {
+                    "name": "collection_name",
+                    "type": "name"
+                },
+                {
+                    "name": "schema_name",
+                    "type": "name"
+                },
+                {
+                    "name": "new_asset_owner",
+                    "type": "name"
+                },
+                {
+                    "name": "immutable_data",
+                    "type": "ATTRIBUTE_MAP"
+                },
+                {
+                    "name": "mutable_data",
+                    "type": "ATTRIBUTE_MAP"
+                },
+                {
+                    "name": "count",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "pair_string_ATOMIC_ATTRIBUTE",
+            "base": "",
+            "fields": [
+                {
+                    "name": "key",
+                    "type": "string"
+                },
+                {
+                    "name": "value",
+                    "type": "ATOMIC_ATTRIBUTE"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "initstorage",
+            "type": "initstorage",
+            "ricardian_contract": "---\nspec_version: \"0.2.0\"\ntitle: Init Storage\nsummary: 'Init Storage'/\nicon:\n---\n."
+        },
+        {
+            "name": "mintlasttemp",
+            "type": "mintlasttemp",
+            "ricardian_contract": "---\nspec_version: \"0.2.0\"\ntitle: Mint Last Template\nsummary: 'Mint Last Template'\nicon:\n---\n."
+        }
+    ],
+    "tables": [
+        {
+            "name": "resources",
+            "type": "Resource",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": [
+        {
+            "name": "variant_int8_int16_int32_int64_uint8_uint16_uint32_uint64_float32_float64_string_INT8_VEC_INT16_VEC_INT32_VEC_INT64_VEC_UINT8_VEC_UINT16_VEC_UINT32_VEC_UINT64_VEC_FLOAT_VEC_DOUBLE_VEC_STRING_VEC",
+            "types": ["int8","int16","int32","int64","uint8","uint16","uint32","uint64","float32","float64","string","INT8_VEC","INT16_VEC","INT32_VEC","INT64_VEC","UINT8_VEC","UINT16_VEC","UINT32_VEC","UINT64_VEC","FLOAT_VEC","DOUBLE_VEC","STRING_VEC"]
+        }
+    ]
+}
